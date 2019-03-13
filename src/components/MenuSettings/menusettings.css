@@ -11,7 +11,7 @@
   font-size: 1rem;
   font-weight: bold;
   opacity: 0.4;
-  padding: 0px 8px;
+  padding: 0px 12px;
 }
 .swTest-navbar-userAvatar {
   border-radius: 50%;
@@ -30,26 +30,32 @@
   cursor: pointer;
 }
 .swTest-navbar-notifications {
-  padding: 0px 20px;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
   transition: transform 0.2s cubic-bezier(0, 0, 0, 2.2);
-  height: 22px;
-  width: 22px;
+  width: 30px;
+  cursor: pointer;
 }
 .swTest-navbar-notifCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 18px;
   height: 18px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   border-radius: 50%;
   color: white;
-  padding: 3px 6px;
   background-color: #2995da;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
   position: relative;
-  top: -45px;
-  right: -9px;
+  top: -12px;
+  right: -8px;
 }
-
+.swTest-navbar-mailIcon {
+  position: absolute;
+}
 .swTest-navbar-notifications:hover {
   transform: scale(1.1);
 }
