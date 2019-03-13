@@ -9,13 +9,13 @@ import ActivityFeed from "./components/ActivityFeed/activityfeed";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <NavBar />
+      <main className="swTest">
+        <SideNav sidenavTitle="Teams" />
+        <NavBar navbarTitle="Teams" />
         <Header />
         <Content />
         <ActivityFeed />
-        <SideNav />
-      </div>
+      </main>
     );
   }
 }

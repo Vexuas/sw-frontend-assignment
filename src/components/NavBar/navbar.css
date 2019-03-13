@@ -1,9 +1,32 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../../Proxima_Nova.ttf");
+}
 .swTest-navbar {
-  position: absolute;
-  left: 5.27%;
-  right: -0.13%;
-  top: 0%;
-  bottom: 93.33%;
+  position: fixed;
+  cursor: default;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  height: 80px;
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: "Proxima Nova";
   background-color: #ffffff;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 2px solid #e2e2e2;
+}
+
+.swTest-navbar-name {
+  display: flex;
+  align-items: center;
+  color: rgba(10.2, 9.8, 9.8, 0.4);
+  font-weight: bold;
+  padding: 0px 40px;
+  margin-left: 80px;
+  border-right: 2px solid #e2e2e2;
+}
+.swTest-navbar-title {
+  display: flex;
+  align-items: center;
+  padding: 0px 30px;
 }
