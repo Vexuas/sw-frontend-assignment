@@ -11,32 +11,3 @@
   margin: 24px 0px;
   transition: transform 0.2s cubic-bezier(0, 0, 0, 2.2);
 }
-.swTest-menu {
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.swTest-menu-img {
-  margin: 24px 0px;
-  transition: transform 0.2s cubic-bezier(0, 0, 0, 2.2);
-  filter: opacity(0.3);
-}
-.swTest-menu:last-child {
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-}
-
-.swTest-menu:hover .swTest-menu-img {
-  transform: scale(1.15);
-  filter: opacity(0.6);
-}
-#swTest-currentPage {
-  display: flex;
-  justify-content: center;
-  background-color: #2995da;
-}
-#swTest-currentPageImg {
-  margin: 24px 0px;
-}

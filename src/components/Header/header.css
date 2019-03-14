@@ -1,5 +1,6 @@
 .swTest-header {
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
   top: 80px;
   width: 100%;

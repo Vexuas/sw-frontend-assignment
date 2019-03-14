@@ -1,0 +1,56 @@
+.swTest-header-firstSegment {
+  margin-left: 80px;
+  display: flex;
+  align-items: center;
+  height: 96px;
+  width: 100%;
+  margin-bottom: 18px;
+}
+.swTest-header-title {
+  display: flex;
+  color: #1a1919;
+  font-weight: bold;
+  font-size: 1.8rem;
+  cursor: default;
+}
+.swTest-header-logo {
+  margin-left: 32px;
+  display: flex;
+  padding: 0px 10px;
+  width: 34px;
+  height: 34px;
+}
+.swTest-header-newTeam {
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin: 0px 44px;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.91rem;
+  color: white;
+  width: 189px;
+  height: 36px;
+  background-color: #40d2bf;
+  border-radius: 4px 4px 4px 4px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+.swTest-header-newTeamAdd {
+  display: flex;
+  justify-content: center;
+  line-height: 32px;
+  position: absolute;
+  font-weight: bold;
+  width: 36px;
+  height: 36px;
+  font-size: 2rem;
+}
+.swTest-header-newTeamTitle {
+  position: absolute;
+  right: 0;
+  padding: 0px 12px;
+}
+.swTest-header-newTeam:hover {
+  background-color: #3cab9c;
+}

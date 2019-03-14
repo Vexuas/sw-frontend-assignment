@@ -1,0 +1,30 @@
+.swTest-header-secondSegment {
+  margin-left: 80px;
+  display: flex;
+  height: 32px;
+  width: 100%;
+}
+.swTest-header-tabs {
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: bold;
+  align-items: flex-start;
+  margin-left: 42px;
+  border-bottom: 3px solid #0083e3;
+  cursor: pointer;
+}
+.swTest-header-tabTitles {
+  padding: 0px 25px;
+}
+.swTest-header-searchBar {
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin: 0px 80px;
+}
+.swTest-header-searchIcon {
+  width: 22px;
+  height: 22px;
+  opacity: 0.4;
+  padding: 0px 3px;
+}
