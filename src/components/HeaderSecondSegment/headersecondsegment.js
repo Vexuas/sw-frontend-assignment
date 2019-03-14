@@ -7,7 +7,9 @@ class HeaderSecondSegment extends Component {
     return (
       <div className="swTest-header-secondSegment">
         <div className="swTest-header-tabs">
-          <span className="swTest-header-tabTitles">All</span>
+          <span className="swTest-header-tabTitles" style={this.props.styles}>
+            All
+          </span>
           <span className="swTest-header-tabTitles">Favorites</span>
           <span className="swTest-header-tabTitles">Archived</span>
         </div>

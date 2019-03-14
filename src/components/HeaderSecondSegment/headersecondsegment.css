@@ -10,11 +10,12 @@
   font-weight: bold;
   align-items: flex-start;
   margin-left: 42px;
-  border-bottom: 3px solid #0083e3;
-  cursor: pointer;
 }
 .swTest-header-tabTitles {
   padding: 0px 25px;
+  padding-bottom: 8.2px;
+  cursor: pointer;
+  transition: color 0.2s linear;
 }
 .swTest-header-searchBar {
   display: flex;
@@ -27,4 +28,7 @@
   height: 22px;
   opacity: 0.4;
   padding: 0px 3px;
+}
+.swTest-header-tabTitles:hover {
+  color: #0083e3;
 }

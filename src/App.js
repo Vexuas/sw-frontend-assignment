@@ -55,7 +55,6 @@ class App extends Component {
           headerLogo="https://cdn.discordapp.com/attachments/248430185463021569/555448393166487559/icon_companies.png"
         />
         <Content />
-        <ActivityFeed />
       </main>
     );
   }

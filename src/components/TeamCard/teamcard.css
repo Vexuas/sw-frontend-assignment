@@ -1,0 +1,68 @@
+.swTest-content-teamsImage {
+  padding: 12px 12px;
+  width: 36px;
+  height: 36px;
+}
+.swTest-content-teamCard {
+  width: 335px;
+  height: 180px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  border: 1px solid #e4e7ec;
+  border-radius: 4px 4px 4px 4px;
+  font-family: "Proxima Nova";
+}
+.swTest-teamCard-top {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+.swTest-teamCard-mid {
+  text-align: start;
+  padding: 0px 12px;
+  padding-bottom: 15px;
+  overflow-wrap: break-word;
+  border-bottom: 1px solid #e4e7ec;
+}
+.swTest-teamCard-bot {
+  display: flex;
+  padding: 18px 12px;
+}
+.swTest-content-teamName {
+  padding: 12px 0px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444444;
+}
+.swTest-content-teamDate {
+  color: #565656;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 13px;
+  left: 59px;
+  opacity: 0.5;
+}
+.swTest-content-star {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.swTest-content-desc {
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  color: #565656;
+}
+.swTest-content-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+}
+.swTest-content-campCount {
+  padding: 0px 8px;
+  opacity: 0.45;
+  font-size: 0.9rem;
+}
