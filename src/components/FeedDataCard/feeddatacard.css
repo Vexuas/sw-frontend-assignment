@@ -1,0 +1,24 @@
+.swTest-activityFeed-data {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  cursor: default;
+}
+.swTest-activityFeed-desc {
+  text-align: start;
+  font-family: "Proxima Nova";
+  color: #444444;
+  padding: 0px 10px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.swTest-activityFeed-time {
+  display: flex;
+  position: absolute;
+  bottom: -20px;
+  font-size: 0.9rem;
+  opacity: 0.4;
+}
+.swTest-activityFeed-phrase {
+  font-size: 0.95rem;
+}
