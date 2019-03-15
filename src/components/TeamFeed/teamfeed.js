@@ -15,7 +15,7 @@ class TeamFeed extends Component {
     };
   }
   getTeams() {
-    fetch("http://localhost:4002/teams")
+    fetch("https://sw-assigment-mock-api.herokuapp.com/teams")
       .then(response => response.json())
       .then(response => {
         teamData = [];

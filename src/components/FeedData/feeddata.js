@@ -12,7 +12,7 @@ class FeedData extends Component {
     };
   }
   getActivityFeed() {
-    fetch("http://localhost:4002/activities")
+    fetch("https://sw-assigment-mock-api.herokuapp.com/activities")
       .then(response => response.json())
       .then(response => {
         feedData = [];

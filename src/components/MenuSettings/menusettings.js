@@ -11,7 +11,7 @@ class MenuSettings extends Component {
     };
   }
   getCurrentUser() {
-    fetch("http://localhost:4002/current_user")
+    fetch("https://sw-assigment-mock-api.herokuapp.com/current_user")
       .then(response => response.json())
       .then(response => {
         const currentUser = response;
