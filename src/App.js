@@ -43,8 +43,60 @@ const sideLogos = [
     img_alt: "sw-menu-help"
   }
 ];
-
+const styles = {
+  borderBottom: "3px solid #0083e3",
+  color: "#0083e3",
+  cursor: "default"
+};
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      Allstyles: styles,
+      Favstyles: null,
+      Arcstyles: null,
+      Allactive: true,
+      Favactive: false,
+      Arcactive: false,
+      contentTitle: "All"
+    };
+    this.changeTabsAll = this.changeTabsAll.bind(this);
+    this.changeTabsFav = this.changeTabsFav.bind(this);
+    this.changeTabsArc = this.changeTabsArc.bind(this);
+  }
+  changeTabsAll() {
+    this.setState({
+      Allstyles: styles,
+      Favstyles: null,
+      Arcstyles: null,
+      Allactive: true,
+      Favactive: false,
+      Arcactive: false,
+      contentTitle: "All"
+    });
+  }
+  changeTabsFav() {
+    this.setState({
+      Allstyles: null,
+      Favstyles: styles,
+      Arcstyles: null,
+      Allactive: false,
+      Favactive: true,
+      Arcactive: false,
+      contentTitle: "Favorite"
+    });
+  }
+  changeTabsArc() {
+    this.setState({
+      Allstyles: null,
+      Favstyles: null,
+      Arcstyles: styles,
+      Allactive: false,
+      Favactive: false,
+      Arcactive: true,
+      contentTitle: "Archived"
+    });
+  }
   render() {
     return (
       <main className="swTest">
@@ -53,8 +105,19 @@ class App extends Component {
         <Header
           headerTitle="Teams"
           headerLogo="https://cdn.discordapp.com/attachments/248430185463021569/555448393166487559/icon_companies.png"
+          Allstyles={this.state.Allstyles}
+          Favstyles={this.state.Favstyles}
+          Arcstyles={this.state.Arcstyles}
+          changeTabsAll={this.changeTabsAll}
+          changeTabsFav={this.changeTabsFav}
+          changeTabsArc={this.changeTabsArc}
         />
-        <Content />
+        <Content
+          all={this.state.Allactive}
+          fav={this.state.Favactive}
+          arc={this.state.Arcactive}
+          contentTitle={this.state.contentTitle}
+        />
       </main>
     );
   }

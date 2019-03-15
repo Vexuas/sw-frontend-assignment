@@ -7,11 +7,24 @@ class HeaderSecondSegment extends Component {
     return (
       <div className="swTest-header-secondSegment">
         <div className="swTest-header-tabs">
-          <span className="swTest-header-tabTitles" style={this.props.styles}>
+          <span
+            className="swTest-header-tabTitles"
+            style={this.props.Allstyles}
+            onMouseDown={this.props.changeTabsAll}>
             All
           </span>
-          <span className="swTest-header-tabTitles">Favorites</span>
-          <span className="swTest-header-tabTitles">Archived</span>
+          <span
+            className="swTest-header-tabTitles"
+            style={this.props.Favstyles}
+            onMouseDown={this.props.changeTabsFav}>
+            Favorites
+          </span>
+          <span
+            className="swTest-header-tabTitles"
+            style={this.props.Arcstyles}
+            onMouseDown={this.props.changeTabsArc}>
+            Archived
+          </span>
         </div>
         <div className="swTest-header-searchBar">
           <img

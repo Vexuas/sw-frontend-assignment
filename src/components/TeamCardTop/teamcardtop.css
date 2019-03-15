@@ -1,0 +1,33 @@
+.swTest-teamCard-top {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+.swTest-content-teamsImage {
+  padding: 12px 12px;
+  width: 36px;
+  height: 36px;
+}
+
+.swTest-content-teamName {
+  padding: 12px 0px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444444;
+}
+.swTest-content-teamDate {
+  color: #565656;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 13px;
+  left: 59px;
+  opacity: 0.5;
+}
+.swTest-content-star {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}

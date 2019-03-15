@@ -2,15 +2,19 @@ import React, { Component } from "react";
 import "./teamfeed.css";
 import TeamCard from "../TeamCard/teamcard";
 let teamData = [];
+let teamOutput = [];
 
 class TeamFeed extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      teamData: this.getAllTeams()
+      teamData: this.getTeams(),
+      teamOutput: teamOutput,
+      contentTitle: null,
+      totalCount: null
     };
   }
-  getAllTeams() {
+  getTeams() {
     fetch("http://localhost:4002/teams")
       .then(response => response.json())
       .then(response => {
@@ -20,22 +24,65 @@ class TeamFeed extends Component {
           teamData.push(item);
         });
         this.setState({
-          teamData: teamData
+          teamData: teamData,
+          teamOutput: teamOutput
         });
         console.log(this.state.teamData);
       });
   }
+  getAllTeams() {
+    teamOutput = [];
+    teamData.forEach(item => {
+      teamOutput.push(item);
+    });
+    console.log(teamOutput);
+  }
+  getFavTeams() {
+    teamOutput = [];
+    teamData.forEach(item => {
+      if (item.is_favorited === true) {
+        teamOutput.push(item);
+      } else {
+        return;
+      }
+    });
+
+    console.log(this.state.teamOutput);
+  }
+  getArcTeams() {
+    teamOutput = [];
+    teamData.forEach(item => {
+      if (item.is_archived === true) {
+        teamOutput.push(item);
+      } else {
+        return;
+      }
+    });
+    console.log(this.state.teamOutput);
+  }
+  switchingTabs() {
+    if (this.props.all === true) {
+      this.getAllTeams();
+    } else if (this.props.fav === true) {
+      this.getFavTeams();
+    } else if (this.props.arc === true) {
+      this.getArcTeams();
+    }
+  }
   render() {
+    this.switchingTabs();
     return (
       <div className="swTest-content-teamData">
         <div className="swTest-feed-header">
-          <span className="swTest-feed-title">{this.props.title}</span>
+          <span className="swTest-feed-title">
+            {this.props.contentTitle} Teams
+          </span>
           <span className="swTest-content-teamCount">
-            Showing {this.props.count} out of {teamData.length} teams
+            Showing {teamOutput.length} out of {teamOutput.length} teams
           </span>
         </div>
         <div className="swTest-content-teams">
-          {teamData.map(item => {
+          {teamOutput.map(item => {
             return <TeamCard teamInfo={item} key={item.id} />;
           })}
         </div>

@@ -1,0 +1,13 @@
+.swTest-teamCard-mid {
+  text-align: start;
+  padding: 0px 12px;
+  height: 42px;
+  padding-bottom: 15px;
+  overflow-wrap: break-word;
+  border-bottom: 1px solid #e4e7ec;
+}
+.swTest-content-desc {
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  color: #565656;
+}

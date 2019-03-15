@@ -1,0 +1,14 @@
+.swTest-teamCard-bot {
+  display: flex;
+  padding: 18px 12px;
+}
+
+.swTest-content-icon {
+  height: 16px;
+  opacity: 0.3;
+}
+.swTest-content-campCount {
+  padding: 0px 8px;
+  opacity: 0.45;
+  font-size: 0.9rem;
+}

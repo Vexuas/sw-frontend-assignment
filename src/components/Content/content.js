@@ -7,7 +7,12 @@ class Content extends Component {
   render() {
     return (
       <div className="swTest-content">
-        <TeamFeed title="All Teams" count="9" />
+        <TeamFeed
+          all={this.props.all}
+          fav={this.props.fav}
+          arc={this.props.arc}
+          contentTitle={this.props.contentTitle}
+        />
         <ActivityFeed />
       </div>
     );

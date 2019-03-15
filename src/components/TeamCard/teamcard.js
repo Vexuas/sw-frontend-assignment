@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./teamcard.css";
+import TeamCardTop from "../TeamCardTop/teamcardtop";
+import TeamCardMid from "../TeamCardMid/teamcardmid";
+import TeamCardBot from "../TeamCardBot/teamcardbot";
 
 class TeamCard extends Component {
   render() {
@@ -27,39 +30,19 @@ class TeamCard extends Component {
         backgroundColor: "#ebeef2"
       };
     }
+
     return (
       <div className="swTest-content-teamCard" style={archived}>
-        <div className="swTest-teamCard-top">
-          <img
-            className="swTest-content-teamsImage"
-            src={teaminfo.image}
-            alt="target logo"
-          />
-          <span className="swTest-content-teamName">{teaminfo.name}</span>
-          <span className="swTest-content-teamDate">{createdDate}</span>
-          <img className="swTest-content-star" src={star} />
-        </div>
-        <div className="swTest-teamCard-mid">
-          <span className="swTest-content-desc">{teaminfo.description}</span>
-        </div>
-        <div className="swTest-teamCard-bot">
-          <img
-            className="swTest-content-icon"
-            alt="icons"
-            src="https://cdn.discordapp.com/attachments/511245116871278594/555247539834716171/icon-campaign.png"
-          />
-          <span className="swTest-content-campCount">
-            {teaminfo.campaigns_count} Campaigns
-          </span>
-          <img
-            className="swTest-content-icon"
-            alt="icons"
-            src="https://cdn.discordapp.com/attachments/511245116871278594/555247539834716171/icon-campaign.png"
-          />
-          <span className="swTest-content-campCount">
-            {teaminfo.leads_count} Leads
-          </span>
-        </div>
+        <TeamCardTop
+          teaminfo={teaminfo}
+          star={star}
+          createdDate={createdDate}
+        />
+        <TeamCardMid teaminfoDesc={teaminfo.description} />
+        <TeamCardBot
+          teaminfoCamp={teaminfo.campaigns_count}
+          teaminfoLeads={teaminfo.leads_count}
+        />
       </div>
     );
   }
