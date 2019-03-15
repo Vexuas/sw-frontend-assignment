@@ -11,7 +11,6 @@ class FeedData extends Component {
       feedData: this.getActivityFeed()
     };
   }
-
   getActivityFeed() {
     fetch("http://localhost:4002/activities")
       .then(response => response.json())

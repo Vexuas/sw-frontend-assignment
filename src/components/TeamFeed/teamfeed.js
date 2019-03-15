@@ -35,7 +35,6 @@ class TeamFeed extends Component {
     teamData.forEach(item => {
       teamOutput.push(item);
     });
-    console.log(teamOutput);
   }
   getFavTeams() {
     teamOutput = [];
@@ -46,8 +45,6 @@ class TeamFeed extends Component {
         return;
       }
     });
-
-    console.log(this.state.teamOutput);
   }
   getArcTeams() {
     teamOutput = [];
@@ -58,7 +55,6 @@ class TeamFeed extends Component {
         return;
       }
     });
-    console.log(this.state.teamOutput);
   }
   switchingTabs() {
     if (this.props.all === true) {

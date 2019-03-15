@@ -30,4 +30,5 @@
   width: 16px;
   height: 16px;
   cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0, 0, 0, 2.2);
 }
