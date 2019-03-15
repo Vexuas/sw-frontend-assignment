@@ -1,14 +1,14 @@
 {
-  "main.css": "/swTest-TeamPage/static/css/main.9c310410.chunk.css",
-  "main.js": "/swTest-TeamPage/static/js/main.1fb0d603.chunk.js",
-  "main.js.map": "/swTest-TeamPage/static/js/main.1fb0d603.chunk.js.map",
-  "runtime~main.js": "/swTest-TeamPage/static/js/runtime~main.3d18a1ab.js",
-  "runtime~main.js.map": "/swTest-TeamPage/static/js/runtime~main.3d18a1ab.js.map",
-  "static/js/2.0d258afd.chunk.js": "/swTest-TeamPage/static/js/2.0d258afd.chunk.js",
-  "static/js/2.0d258afd.chunk.js.map": "/swTest-TeamPage/static/js/2.0d258afd.chunk.js.map",
-  "index.html": "/swTest-TeamPage/index.html",
-  "precache-manifest.732c544d414013fe240e21677bff5cfb.js": "/swTest-TeamPage/precache-manifest.732c544d414013fe240e21677bff5cfb.js",
-  "service-worker.js": "/swTest-TeamPage/service-worker.js",
-  "static/css/main.9c310410.chunk.css.map": "/swTest-TeamPage/static/css/main.9c310410.chunk.css.map",
-  "static/media/navbar.css": "/swTest-TeamPage/static/media/Proxima_Nova.feface72.ttf"
+  "main.css": "/sw-frontend-assignment/static/css/main.8bf86c5b.chunk.css",
+  "main.js": "/sw-frontend-assignment/static/js/main.321135d1.chunk.js",
+  "main.js.map": "/sw-frontend-assignment/static/js/main.321135d1.chunk.js.map",
+  "runtime~main.js": "/sw-frontend-assignment/static/js/runtime~main.a56c772f.js",
+  "runtime~main.js.map": "/sw-frontend-assignment/static/js/runtime~main.a56c772f.js.map",
+  "static/js/2.0d258afd.chunk.js": "/sw-frontend-assignment/static/js/2.0d258afd.chunk.js",
+  "static/js/2.0d258afd.chunk.js.map": "/sw-frontend-assignment/static/js/2.0d258afd.chunk.js.map",
+  "index.html": "/sw-frontend-assignment/index.html",
+  "precache-manifest.4d1ae4189a04e37d442e4b19d5681512.js": "/sw-frontend-assignment/precache-manifest.4d1ae4189a04e37d442e4b19d5681512.js",
+  "service-worker.js": "/sw-frontend-assignment/service-worker.js",
+  "static/css/main.8bf86c5b.chunk.css.map": "/sw-frontend-assignment/static/css/main.8bf86c5b.chunk.css.map",
+  "static/media/navbar.css": "/sw-frontend-assignment/static/media/Proxima_Nova.feface72.ttf"
 }
