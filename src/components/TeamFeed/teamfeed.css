@@ -39,4 +39,7 @@
     height: 100%;
     min-height: 450px;
   }
+  .swTest-header-searchBar {
+    margin: 0px 40px;
+  }
 }
