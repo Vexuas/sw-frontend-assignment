@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar/navbar";
 import Header from "./components/Header/header";
 import Content from "./components/Content/content";
 
+//Side Navigation Bar Information
 const sideLogos = [
   {
     id: 1,
@@ -43,11 +44,14 @@ const sideLogos = [
   }
 ];
 
+//Current Team Tab styles
 const styles = {
   borderBottom: "3px solid #0083e3",
   color: "#0083e3",
   cursor: "default"
 };
+//Initial Team Data
+let teamOutput = [];
 
 class App extends Component {
   constructor(props) {
@@ -68,6 +72,8 @@ class App extends Component {
     this.changeTabsFav = this.changeTabsFav.bind(this);
     this.changeTabsArc = this.changeTabsArc.bind(this);
   }
+
+  //Switching to different Team Tabs
   changeTabsAll() {
     this.setState({
       Allstyles: styles,
@@ -101,6 +107,8 @@ class App extends Component {
       contentTitle: "Archived"
     });
   }
+
+  //Fetching data from mock api
   getApiData() {
     fetch("https://sw-assigment-mock-api.herokuapp.com/db").then(response =>
       response.json().then(response => {
@@ -113,10 +121,42 @@ class App extends Component {
       })
     );
   }
+
+  //Filtering teams between all, favorites & archived
+  getAllTeams() {
+    teamOutput = [];
+    let teamData = this.state.teamFeed;
+    teamOutput = teamData.filter(item => item);
+  }
+
+  getFavTeams() {
+    teamOutput = [];
+    let teamData = this.state.teamFeed;
+    teamOutput = teamData.filter(item => item.is_favorited === true);
+  }
+
+  getArcTeams() {
+    teamOutput = [];
+    let teamData = this.state.teamFeed;
+    teamOutput = teamData.filter(item => item.is_archived === true);
+  }
+
+  //Displaying teams after each tab switch
+  switchingTabs() {
+    if (this.state.Allactive === true) {
+      this.getAllTeams();
+    } else if (this.state.Favactive === true) {
+      this.getFavTeams();
+    } else if (this.state.Arcactive === true) {
+      this.getArcTeams();
+    }
+  }
+
   componentDidMount() {
     this.getApiData();
   }
   render() {
+    this.switchingTabs();
     return (
       <main className="swTest">
         <SideNav sidenavTitle="Teams" sideLogos={sideLogos} />
@@ -137,7 +177,7 @@ class App extends Component {
           arc={this.state.Arcactive}
           contentTitle={this.state.contentTitle}
           actFeed={this.state.actFeed}
-          teamFeed={this.state.teamFeed}
+          teams={teamOutput}
         />
       </main>
     );
