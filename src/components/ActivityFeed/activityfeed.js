@@ -9,7 +9,7 @@ class ActivityFeed extends Component {
         <div className="swTest-feed-header">
           <span className="swTest-feed-title">Activity</span>
         </div>
-        <FeedData />
+        <FeedData actFeed={this.props.actFeed} />
       </div>
     );
   }

@@ -1,60 +1,24 @@
 import React, { Component } from "react";
 import "./teamfeed.css";
 import TeamCard from "../TeamCard/teamcard";
-let teamData = [];
+
 let teamOutput = [];
 
 class TeamFeed extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      teamData: this.getTeams(),
-      teamOutput: teamOutput,
-      contentTitle: null,
-      totalCount: null
-    };
-  }
-  getTeams() {
-    fetch("https://sw-assigment-mock-api.herokuapp.com/teams")
-      .then(response => response.json())
-      .then(response => {
-        teamData = [];
-        const teams = response;
-        teams.forEach(item => {
-          teamData.push(item);
-        });
-        this.setState({
-          teamData: teamData,
-          teamOutput: teamOutput
-        });
-        console.log(this.state.teamData);
-      });
-  }
   getAllTeams() {
     teamOutput = [];
-    teamData.forEach(item => {
-      teamOutput.push(item);
-    });
+    let teamData = this.props.teamFeed;
+    teamOutput = teamData.filter(item => item);
   }
   getFavTeams() {
     teamOutput = [];
-    teamData.forEach(item => {
-      if (item.is_favorited === true) {
-        teamOutput.push(item);
-      } else {
-        return;
-      }
-    });
+    let teamData = this.props.teamFeed;
+    teamOutput = teamData.filter(item => item.is_favorited === true);
   }
   getArcTeams() {
     teamOutput = [];
-    teamData.forEach(item => {
-      if (item.is_archived === true) {
-        teamOutput.push(item);
-      } else {
-        return;
-      }
-    });
+    let teamData = this.props.teamFeed;
+    teamOutput = teamData.filter(item => item.is_archived === true);
   }
   switchingTabs() {
     if (this.props.all === true) {

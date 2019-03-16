@@ -42,11 +42,13 @@ const sideLogos = [
     img_alt: "sw-menu-help"
   }
 ];
+
 const styles = {
   borderBottom: "3px solid #0083e3",
   color: "#0083e3",
   cursor: "default"
 };
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -57,7 +59,10 @@ class App extends Component {
       Allactive: true,
       Favactive: false,
       Arcactive: false,
-      contentTitle: "All"
+      contentTitle: "All",
+      actFeed: [],
+      teamFeed: [],
+      userFeed: {}
     };
     this.changeTabsAll = this.changeTabsAll.bind(this);
     this.changeTabsFav = this.changeTabsFav.bind(this);
@@ -96,11 +101,29 @@ class App extends Component {
       contentTitle: "Archived"
     });
   }
+  getApiData() {
+    fetch("https://sw-assigment-mock-api.herokuapp.com/db").then(response =>
+      response.json().then(response => {
+        const apiData = response;
+        this.setState({
+          actFeed: apiData.activities,
+          teamFeed: apiData.teams,
+          userFeed: apiData.current_user
+        });
+        console.log(this.state.actFeed);
+        console.log(this.state.teamFeed);
+        console.log(this.state.userFeed);
+      })
+    );
+  }
+  componentDidMount() {
+    this.getApiData();
+  }
   render() {
     return (
       <main className="swTest">
         <SideNav sidenavTitle="Teams" sideLogos={sideLogos} />
-        <NavBar navbarTitle="Teams" />
+        <NavBar navbarTitle="Teams" userFeed={this.state.userFeed} />
         <Header
           headerTitle="Teams"
           headerLogo="https://cdn.discordapp.com/attachments/248430185463021569/555448393166487559/icon_companies.png"
@@ -116,6 +139,8 @@ class App extends Component {
           fav={this.state.Favactive}
           arc={this.state.Arcactive}
           contentTitle={this.state.contentTitle}
+          actFeed={this.state.actFeed}
+          teamFeed={this.state.teamFeed}
         />
       </main>
     );

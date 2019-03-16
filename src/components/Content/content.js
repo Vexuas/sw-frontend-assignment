@@ -12,8 +12,9 @@ class Content extends Component {
           fav={this.props.fav}
           arc={this.props.arc}
           contentTitle={this.props.contentTitle}
+          teamFeed={this.props.teamFeed}
         />
-        <ActivityFeed />
+        <ActivityFeed actFeed={this.props.actFeed} />
       </div>
     );
   }

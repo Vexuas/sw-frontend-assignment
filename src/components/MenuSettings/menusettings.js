@@ -2,27 +2,8 @@ import React, { Component } from "react";
 import "./menusettings.css";
 
 class MenuSettings extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      current_user_name: this.getCurrentUser(),
-      current_user_avatar: this.getCurrentUser(),
-      notification_count: this.getCurrentUser()
-    };
-  }
-  getCurrentUser() {
-    fetch("https://sw-assigment-mock-api.herokuapp.com/current_user")
-      .then(response => response.json())
-      .then(response => {
-        const currentUser = response;
-        this.setState({
-          current_user_name: currentUser.name,
-          current_user_avatar: currentUser.avatar,
-          notification_count: currentUser.notifications_count
-        });
-      });
-  }
   render() {
+    let userFeed = this.props.userFeed;
     return (
       <div className="swTest-navbar-menuSettings">
         <div className="swTest-navbar-notifications">
@@ -32,15 +13,13 @@ class MenuSettings extends Component {
             className="swTest-navbar-mailIcon"
           />
           <span className="swTest-navbar-notifCount">
-            {this.state.notification_count}
+            {userFeed.notifications_count}
           </span>
         </div>
-        <span className="swTest-navbar-userName">
-          Hello, {this.state.current_user_name}
-        </span>
+        <span className="swTest-navbar-userName">Hello, {userFeed.name}</span>
         <img
           className="swTest-navbar-userAvatar"
-          src={this.state.current_user_avatar}
+          src={userFeed.avatar}
           alt="user avatar"
         />
         <span className="swTest-navbar-userSettings" />

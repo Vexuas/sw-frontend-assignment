@@ -8,7 +8,7 @@ class NavBar extends Component {
       <div className="swTest-navbar">
         <span className="swTest-navbar-name">NARWHAL</span>
         <span className="swTest-navbar-title">{this.props.navbarTitle}</span>
-        <MenuSettings />
+        <MenuSettings userFeed={this.props.userFeed} />
       </div>
     );
   }

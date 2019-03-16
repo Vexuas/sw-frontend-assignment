@@ -1,7 +1,3 @@
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("../../Proxima_Nova.ttf");
-}
 .swTest-navbar {
   position: fixed;
   cursor: default;
