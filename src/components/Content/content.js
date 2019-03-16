@@ -8,9 +8,6 @@ class Content extends Component {
     return (
       <div className="swTest-content">
         <TeamFeed
-          all={this.props.all}
-          fav={this.props.fav}
-          arc={this.props.arc}
           contentTitle={this.props.contentTitle}
           teams={this.props.teams}
         />

@@ -58,7 +58,7 @@ class TeamCardTop extends Component {
         </span>
         <img
           className="swTest-content-star"
-          alt="target logo"
+          alt="target logo star"
           src={this.props.star}
           style={this.state.style}
           onMouseEnter={this.hoverIn}
