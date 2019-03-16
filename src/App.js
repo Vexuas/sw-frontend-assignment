@@ -110,9 +110,6 @@ class App extends Component {
           teamFeed: apiData.teams,
           userFeed: apiData.current_user
         });
-        console.log(this.state.actFeed);
-        console.log(this.state.teamFeed);
-        console.log(this.state.userFeed);
       })
     );
   }
