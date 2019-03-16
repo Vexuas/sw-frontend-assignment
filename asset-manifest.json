@@ -1,14 +1,14 @@
 {
-  "main.css": "/sw-frontend-assignment/static/css/main.8bf86c5b.chunk.css",
-  "main.js": "/sw-frontend-assignment/static/js/main.321135d1.chunk.js",
-  "main.js.map": "/sw-frontend-assignment/static/js/main.321135d1.chunk.js.map",
+  "main.css": "/sw-frontend-assignment/static/css/main.e0a73ba1.chunk.css",
+  "main.js": "/sw-frontend-assignment/static/js/main.1764f693.chunk.js",
+  "main.js.map": "/sw-frontend-assignment/static/js/main.1764f693.chunk.js.map",
   "runtime~main.js": "/sw-frontend-assignment/static/js/runtime~main.a56c772f.js",
   "runtime~main.js.map": "/sw-frontend-assignment/static/js/runtime~main.a56c772f.js.map",
   "static/js/2.0d258afd.chunk.js": "/sw-frontend-assignment/static/js/2.0d258afd.chunk.js",
   "static/js/2.0d258afd.chunk.js.map": "/sw-frontend-assignment/static/js/2.0d258afd.chunk.js.map",
   "index.html": "/sw-frontend-assignment/index.html",
-  "precache-manifest.4d1ae4189a04e37d442e4b19d5681512.js": "/sw-frontend-assignment/precache-manifest.4d1ae4189a04e37d442e4b19d5681512.js",
+  "precache-manifest.cf33013d7d85ccc5c0789a1c7a7359a4.js": "/sw-frontend-assignment/precache-manifest.cf33013d7d85ccc5c0789a1c7a7359a4.js",
   "service-worker.js": "/sw-frontend-assignment/service-worker.js",
-  "static/css/main.8bf86c5b.chunk.css.map": "/sw-frontend-assignment/static/css/main.8bf86c5b.chunk.css.map",
-  "static/media/navbar.css": "/sw-frontend-assignment/static/media/Proxima_Nova.feface72.ttf"
+  "static/css/main.e0a73ba1.chunk.css.map": "/sw-frontend-assignment/static/css/main.e0a73ba1.chunk.css.map",
+  "static/media/index.css": "/sw-frontend-assignment/static/media/Proxima_Nova.feface72.ttf"
 }
