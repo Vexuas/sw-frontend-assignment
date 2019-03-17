@@ -4,6 +4,7 @@ import SideNav from "./components/SideNav/sidenav";
 import NavBar from "./components/NavBar/navbar";
 import Header from "./components/Header/header";
 import Content from "./components/Content/content";
+import Loading from "./components/Loading/loading";
 
 //Side Navigation Bar Information
 const sideLogos = [
@@ -64,9 +65,9 @@ class App extends Component {
       Favactive: false,
       Arcactive: false,
       contentTitle: "All",
-      actFeed: [],
-      teamFeed: [],
-      userFeed: {}
+      actFeed: null,
+      teamFeed: null,
+      userFeed: null
     };
     this.changeTabsAll = this.changeTabsAll.bind(this);
     this.changeTabsFav = this.changeTabsFav.bind(this);
@@ -156,31 +157,35 @@ class App extends Component {
     this.getApiData();
   }
   render() {
-    this.switchingTabs();
-    return (
-      <main className="swTest">
-        <SideNav sidenavTitle="Teams" sideLogos={sideLogos} />
-        <NavBar navbarTitle="Teams" userFeed={this.state.userFeed} />
-        <Header
-          headerTitle="Teams"
-          headerLogo="https://cdn.discordapp.com/attachments/248430185463021569/555448393166487559/icon_companies.png"
-          Allstyles={this.state.Allstyles}
-          Favstyles={this.state.Favstyles}
-          Arcstyles={this.state.Arcstyles}
-          changeTabsAll={this.changeTabsAll}
-          changeTabsFav={this.changeTabsFav}
-          changeTabsArc={this.changeTabsArc}
-        />
-        <Content
-          all={this.state.Allactive}
-          fav={this.state.Favactive}
-          arc={this.state.Arcactive}
-          contentTitle={this.state.contentTitle}
-          actFeed={this.state.actFeed}
-          teams={teamOutput}
-        />
-      </main>
-    );
+    if (this.state.teamFeed === null) {
+      return <Loading />;
+    } else {
+      this.switchingTabs();
+      return (
+        <main className="swTest">
+          <SideNav sidenavTitle="Teams" sideLogos={sideLogos} />
+          <NavBar navbarTitle="Teams" userFeed={this.state.userFeed} />
+          <Header
+            headerTitle="Teams"
+            headerLogo="https://cdn.discordapp.com/attachments/248430185463021569/555448393166487559/icon_companies.png"
+            Allstyles={this.state.Allstyles}
+            Favstyles={this.state.Favstyles}
+            Arcstyles={this.state.Arcstyles}
+            changeTabsAll={this.changeTabsAll}
+            changeTabsFav={this.changeTabsFav}
+            changeTabsArc={this.changeTabsArc}
+          />
+          <Content
+            all={this.state.Allactive}
+            fav={this.state.Favactive}
+            arc={this.state.Arcactive}
+            contentTitle={this.state.contentTitle}
+            actFeed={this.state.actFeed}
+            teams={teamOutput}
+          />
+        </main>
+      );
+    }
   }
 }
 
